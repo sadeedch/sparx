@@ -41,38 +41,39 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen bg-gradient-to-r from-purple-500 to-purple-900 text-white flex flex-col items-center justify-start p-4 overflow-hidden">
-      <div className={`z-10 flex flex-col items-center transition-all duration-500 ${shrinkHeader ? "scale-75 mt-2" : "scale-100 mt-6"}`}>
+      <div className={`z-10 flex flex-col items-center text-center transition-all duration-500 ${shrinkHeader ? "scale-90 mt-2" : "scale-100 mt-6"}`}>
         <img
           src="/logo.png"
           alt="Sparx Sports Logo"
-          className="w-90 h-90 object-contain mb-2 animate-fadeIn"
+          className="w-48 h-48 sm:w-90 sm:h-90 object-contain mb-2 animate-fadeIn"
         />
-        <p className="text-lg text-white/80 tracking-wide mb-2 italic">Unleash the Power of Performance</p>
-        <h1 className="text-4xl font-bold mb-2">SparX Sports Products</h1>
+        <p className="text-sm sm:text-base text-white/80 tracking-wide mb-2 italic">Unleash the Power of Performance</p>
+        <h1 className="text-2xl sm:text-4xl font-bold mb-2">SparX Sports Products</h1>
       </div>
 
-      <div className="relative z-10 w-full max-w-xl flex items-center justify-center">
+      <div className="relative z-10 w-full max-w-xl flex items-center justify-center mt-4 sm:mt-8 px-2">
         <button onClick={prev} className="absolute left-0 z-10 bg-gray-800 p-2 rounded-full hover:bg-gray-700">
           <ArrowLeft />
         </button>
 
-        <div className={`transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0"} bg-white/10 backdrop-blur-md text-white p-6 rounded-2xl shadow-2xl w-full flex flex-col items-center border border-white/10`}>
-          <img src={products[index].img} alt={products[index].name} className="w-64 h-64 object-contain mb-4" />
-          <h2 className="text-xl font-semibold text-center">{products[index].name}</h2>
-          <p className="text-lg text-green-300">{products[index].price}</p>
+        <div className={`transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0"} bg-white/10 backdrop-blur-md text-white p-4 sm:p-6 rounded-2xl shadow-2xl w-full flex flex-col items-center border border-white/10`}>          
+          <img src={products[index].img} alt={products[index].name} className="w-48 h-48 sm:w-64 sm:h-64 object-contain mb-4" />
+          <h2 className="text-lg sm:text-xl font-semibold text-center">{products[index].name}</h2>
+          <p className="text-base sm:text-lg text-green-300">{products[index].price}</p>
         </div>
 
         <button onClick={next} className="absolute right-0 z-10 bg-gray-800 p-2 rounded-full hover:bg-gray-700">
           <ArrowRight />
         </button>
       </div>
-      <div className="z-10 mt-10 bg-white/10 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/10 flex flex-col items-center">
-        <p className="text-white text-lg font-semibold mb-2">Contact us on Instagram</p>
+
+      <div className="z-10 mt-10 bg-white/10 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/10 flex flex-col items-center text-center w-full max-w-sm">
+        <p className="text-white text-base sm:text-lg font-semibold mb-2">Contact us on Instagram</p>
         <a
           href="https://www.instagram.com/sparx.sports"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 bg-pink-600 hover:bg-pink-700 transition px-4 py-2 rounded-full text-white"
+          className="flex items-center gap-2 bg-pink-600 hover:bg-pink-700 transition px-4 py-2 rounded-full text-white text-sm sm:text-base"
         >
           <Instagram size={20} /> @SparX Sports Australia
         </a>

@@ -43,7 +43,7 @@ export default function Home() {
     <main className="relative min-h-screen bg-gradient-to-r from-purple-500 to-purple-900 text-white flex flex-col items-center justify-start p-4 overflow-hidden">
       <div className={`z-10 flex flex-col items-center transition-all duration-500 ${shrinkHeader ? "scale-75 mt-2" : "scale-100 mt-6"}`}>
         <img
-          src="/public/logo.png"
+          src="/logo.png"
           alt="Sparx Sports Logo"
           className="w-90 h-90 object-contain mb-2 animate-fadeIn"
         />
